@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif; /* Ensure to include this font in your project */
+        }
+
+        /* Body and HTML */
+        body {
+            /* Add background image */
+            background-image: url('./image/image about page.avif'); /* Ensure path is correct */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            color: #fff; /* White text color for better readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height */
+            position: relative; /* Set position for pseudo-element */
+        }
+
+        /* Overlay for background image */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 1; /* Ensure overlay is behind text */
+        }
+
+        /* About Container */
+        .about-container {
+            background-color: rgba(23, 23, 24, 0.8); /* Slightly transparent background for container */
+            padding: 40px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+            max-width: 800px; /* Max width for the container */
+            text-align: center; /* Center text */
+            position: relative; /* Allow stacking context for the text */
+            z-index: 2; /* Ensure content is above the overlay */
+        }
+
+        h2 {
+            font-size: 36px; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+            color: #e6683b; /* Highlight color for the heading */
+            transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and scaling */
+        }
+
+        h2:hover {
+            color: #fff; /* Change color on hover */
+            transform: scale(1.05); /* Slightly scale up the heading */
+        }
+
+        p {
+            font-size: 18px; /* Font size for paragraph */
+            line-height: 1.6; /* Improved line height for readability */
+            margin-bottom: 15px; /* Space below each paragraph */
+            color: #ccc; /* Lighter text color for the paragraph */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 20px; /* Reduce padding on smaller screens */
+            }
+
+            h2 {
+                font-size: 28px; /* Smaller font size for the heading */
+            }
+
+            p {
+                font-size: 16px; /* Smaller font size for paragraph */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h2>About me</h2>
+        <p>I'm Diksha Singh, a front-end web developer skilled in HTML, CSS, JavaScript, and Tailwind CSS. I specialize in building responsive, user-friendly websites with clean and efficient code. With a B.Tech in Computer Science, I have a strong technical foundation and a passion for SEO, ensuring the sites I build are not only visually appealing but also optimized for performance.</p>
+        <p>I'm dedicated to continuous learning and love staying updated on the latest trends in web development. I thrive on solving challenges and am always looking for opportunities to grow and contribute to exciting projects.</p>
+    </div>
+</body>
+</html>
